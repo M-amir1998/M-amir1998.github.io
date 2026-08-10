@@ -60,6 +60,9 @@
       `<span class="project__links">${repoLink}${demoLink}</span></div>` +
       (p.badge ? `<span class="project__badge">${p.badge}</span>` : "") +
       `<h3>${titleHtml}</h3><p>${p.description}</p>` +
+      (p.media
+        ? `<div class="project__media"><img src="${p.media}" alt="${p.mediaAlt || ""}" loading="lazy"></div>`
+        : "") +
       `<ul class="project__tags">${p.tags.map((t) => `<li>${t}</li>`).join("")}</ul>`;
     projGrid.appendChild(el);
   });

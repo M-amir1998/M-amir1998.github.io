@@ -620,6 +620,19 @@ html[data-theme="light"] .icon-sun { display: none; }
 .project__tags li { font-size: 0.75rem; color: var(--text-mute); }
 .project__tags li::before { content: "▸ "; color: var(--accent-1); }
 
+.project__media {
+  margin: 4px 0 22px;
+  padding: 16px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.project__media img {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 /* ── Timeline ──────────────────────────────────────────────── */
 .timeline {
   position: relative;

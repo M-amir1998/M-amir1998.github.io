@@ -46,6 +46,8 @@ const SITE_DATA = {
         "tell them they see. Combines multisensor fusion, cooperative perception pipelines and " +
         "structured LLM reasoning over dynamic driving scenes.",
       tags: ["V2X", "Cooperative Perception", "LLM Reasoning", "PyTorch", "Sensor Fusion"],
+      media: "images/fusion-diagram.svg",
+      mediaAlt: "Animated multisensor data fusion pipeline: camera, radar, LiDAR and V2X fused into a world model, with a ghost object rejected by LLM reasoning",
       repo: null,   // private for now — set a URL when public
       demo: null,
     },
