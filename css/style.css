@@ -633,6 +633,39 @@ html[data-theme="light"] .icon-sun { display: none; }
   margin: 0 auto;
 }
 
+.project__media--duo {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.media-panel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.media-panel canvas {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  background: #0a0e17; /* perception viz stays dark in both themes */
+  border: 1px solid var(--border);
+}
+.media-panel img { width: 100%; height: auto; margin: auto 0; }
+.media-cap {
+  font-size: 0.72rem;
+  color: var(--text-mute);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 920px) {
+  .project__media--duo { grid-template-columns: 1fr; }
+  .media-panel canvas { height: 260px; }
+}
+
 /* ── Timeline ──────────────────────────────────────────────── */
 .timeline {
   position: relative;

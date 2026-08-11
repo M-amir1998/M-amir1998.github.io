@@ -47,7 +47,8 @@ const SITE_DATA = {
         "structured LLM reasoning over dynamic driving scenes.",
       tags: ["V2X", "Cooperative Perception", "LLM Reasoning", "PyTorch", "Sensor Fusion"],
       media: "images/fusion-diagram.svg",
-      mediaAlt: "Animated multisensor data fusion pipeline: camera, radar, LiDAR and V2X fused into a world model, with a ghost object rejected by LLM reasoning",
+      mediaAlt: "Animated multisensor data fusion pipeline: camera, radar, LiDAR and V2X fused, then validated by a causal and feasibility check that rejects a ghost object",
+      mediaScene: true,   // adds the live cooperative-driving canvas next to the pipeline
       repo: null,   // private for now — set a URL when public
       demo: null,
     },

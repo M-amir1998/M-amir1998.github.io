@@ -31,6 +31,7 @@ index.html      — single-page site (all sections)
 css/style.css   — design system: tokens, dark/light themes, animations
 js/data.js      — ✏️ all editable content
 js/hero.js      — animated canvas hero (V2X network + LiDAR sweep)
+js/scene.js     — cooperative driving scene (vehicles, ray-cast LiDAR point clouds)
 js/main.js      — typing effect, scroll reveals, counters, nav, theme toggle
 images/         — profile picture and assets
 files/          — CV and downloadable files

@@ -61,7 +61,16 @@
       (p.badge ? `<span class="project__badge">${p.badge}</span>` : "") +
       `<h3>${titleHtml}</h3><p>${p.description}</p>` +
       (p.media
-        ? `<div class="project__media"><img src="${p.media}" alt="${p.mediaAlt || ""}" loading="lazy"></div>`
+        ? `<div class="project__media${p.mediaScene ? " project__media--duo" : ""}">` +
+          (p.mediaScene
+            ? `<figure class="media-panel"><canvas id="coopCanvas" aria-label="Animated cooperative driving scene: vehicles scanned by ego and V2X partner LiDAR, with detections and planned trajectory"></canvas>` +
+              `<figcaption class="media-cap mono" id="sceneLabel">scene 01 · highway overtake · v2x</figcaption></figure>`
+            : "") +
+          `<figure class="media-panel"><img src="${p.media}" alt="${p.mediaAlt || ""}" loading="lazy">` +
+          (p.mediaScene
+            ? `<figcaption class="media-cap mono">ego perception → fusion → causal &amp; feasibility check</figcaption>`
+            : "") +
+          `</figure></div>`
         : "") +
       `<ul class="project__tags">${p.tags.map((t) => `<li>${t}</li>`).join("")}</ul>`;
     projGrid.appendChild(el);
