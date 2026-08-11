@@ -94,16 +94,15 @@
   SITE_DATA.publications.forEach((pub) => {
     const el = document.createElement("article");
     el.className = "pub reveal";
-    const link = (href, label) =>
-      href
-        ? `<a href="${href}" target="_blank" rel="noopener">${label}</a>`
-        : `<span class="disabled">${label}</span>`;
+    const link = pub.url
+      ? `<a href="${pub.url}" target="_blank" rel="noopener">[paper]</a>`
+      : `<span class="disabled">[coming soon]</span>`;
     el.innerHTML =
       `<span class="pub__year">${pub.year}</span>` +
       `<div><h3>${pub.title}</h3>` +
       `<p class="pub__authors">${pub.authors}</p>` +
       `<p class="pub__venue">${pub.venue}</p>` +
-      `<div class="pub__links">${link(pub.pdf, "[pdf]")} ${link(pub.doi, "[doi]")} ${link(pub.code, "[code]")}</div>` +
+      `<div class="pub__links">${link}</div>` +
       `</div>`;
     pubsEl.appendChild(el);
   });
@@ -247,12 +246,4 @@
 
   /* ── Footer year ──────────────────────────────────────────── */
   $("#year").textContent = new Date().getFullYear();
-
-  /* ── CV placeholder notice ────────────────────────────────── */
-  $("#cvBtn").addEventListener("click", (e) => {
-    // Remove this handler once you add your real CV to files/cv.pdf
-    // and update the href in index.html.
-    e.preventDefault();
-    alert("CV coming soon — add your PDF to the files/ folder and update the link in index.html.");
-  });
 })();

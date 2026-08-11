@@ -17,11 +17,9 @@ Almost everything you'll ever want to change lives in **`js/data.js`**:
 | Project cards | `SITE_DATA.projects` |
 | Education/experience timeline | `SITE_DATA.timeline` |
 | Publications | `SITE_DATA.publications` |
-| Bio, about text, social links, email | `index.html` (search for `PLACEHOLDER`) |
-| Profile photo | replace `images/profile.svg` with e.g. `images/profile.jpg` and update the `<img>` in `index.html` |
-| CV | add your PDF as `files/cv.pdf`, update the link in `index.html`, and delete the `#cvBtn` handler at the bottom of `js/main.js` |
-
-Search the repo for **`PLACEHOLDER`** to find everything still waiting for real data.
+| Bio, about text, social links, email | `index.html` |
+| Profile photo | replace `images/profile.jpg` |
+| CV | replace `files/Amir_Mohammadisarab_CV.pdf` (keep the same filename, or update the link in `index.html`) |
 
 ## Structure
 

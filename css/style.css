@@ -71,6 +71,19 @@ ul { list-style: none; }
 .mono { font-family: var(--font-mono); font-size: 0.85em; }
 .accent { color: var(--accent-1); }
 
+/* Justified body text site-wide */
+.hero__tagline,
+.about__text p,
+.pillar p,
+.project p,
+.tl-item p,
+.pub__authors,
+.contact__text {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 .gradient-text {
   background: var(--gradient);
   -webkit-background-clip: text;
